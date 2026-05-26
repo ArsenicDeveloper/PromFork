@@ -524,3 +524,17 @@ textarea::-webkit-scrollbar-thumb:hover { background: var(--text3); }
 ::-webkit-scrollbar        { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track  { background: transparent; }
 ::-webkit-scrollbar-thumb  { background: var(--border2); border-radius: 3px; }
+
+/* ── Toggle group labels ─────────────────────────────────────── */
+.tog-group-label {
+  font-size: 9px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 8px 2px;
+}
+.new-badge {
+  color: var(--accent);
+  font-size: 9px;
+  vertical-align: super;
+}
