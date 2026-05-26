@@ -10,42 +10,37 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="logo">
       <div class="logo-icon">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 2L3 5.5V10C3 13.87 6.08 17.49 10 18.5C13.92 17.49 17 13.87 17 10V5.5L10 2Z" fill="url(#shield-grad)"/>
+          <path d="M10 2L3 5.5V10C3 13.87 6.08 17.49 10 18.5C13.92 17.49 17 13.87 17 10V5.5L10 2Z" fill="url(#sg)"/>
           <path d="M7 10L9 12L13 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <defs>
-            <linearGradient id="shield-grad" x1="3" y1="2" x2="17" y2="18.5" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#a78bfa"/>
-              <stop offset="1" stop-color="#38bdf8"/>
-            </linearGradient>
-          </defs>
+          <defs><linearGradient id="sg" x1="3" y1="2" x2="17" y2="18.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a78bfa"/><stop offset="1" stop-color="#38bdf8"/>
+          </linearGradient></defs>
         </svg>
       </div>
       <span class="logo-name">LuaShield</span>
       <span class="logo-tag">obfuscator</span>
     </div>
     <div class="header-center">
-      <span class="badge prometheus">Prometheus-Enhanced</span>
+      <span class="badge prometheus">Prometheus-Fork</span>
       <span class="badge luau">Luau / Roblox</span>
     </div>
     <div class="header-right">
       <a href="https://github.com/prometheus-lua/Prometheus" target="_blank" class="gh-link">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         Prometheus
       </a>
     </div>
   </header>
 
-  <!-- MAIN -->
   <main>
     <div class="workspace">
 
-      <!-- INPUT PANEL -->
-      <div class="panel" id="panel-input">
+      <!-- INPUT -->
+      <div class="panel">
         <div class="panel-bar">
           <div class="panel-title">
             <span class="dot dot-blue"></span>
@@ -53,116 +48,101 @@
             <span class="lang-tag">Lua</span>
           </div>
           <div class="panel-actions">
-            <button class="icon-btn" id="btn-sample" title="Load sample">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1h6l3 3v8H2V1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M8 1v3h3" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M4 6h5M4 8h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <button class="icon-btn" id="btn-sample">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1h6l3 3v8H2V1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M8 1v3h3" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
               Sample
             </button>
-            <button class="icon-btn" id="btn-clear" title="Clear">
+            <button class="icon-btn" id="btn-clear">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 2l9 9M11 2L2 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
             </button>
           </div>
         </div>
         <div class="editor-wrap">
           <div class="line-numbers" id="line-numbers-in"></div>
-          <textarea id="input-code" spellcheck="false" autocomplete="off" autocorrect="off" placeholder="-- Paste your Lua / Luau code here..."></textarea>
+          <textarea id="input-code" spellcheck="false" autocomplete="off" placeholder="-- Paste your Lua / Luau code here..."></textarea>
         </div>
-        <div class="panel-footer">
-          <span id="stat-in">0 lines · 0 chars</span>
-        </div>
+        <div class="panel-footer"><span id="stat-in">0 lines · 0 chars</span></div>
       </div>
 
-      <!-- CONTROLS PANEL -->
+      <!-- CONTROLS -->
       <div class="controls-panel">
         <div class="controls-inner">
 
           <div class="ctrl-section">
-            <div class="ctrl-label">Obfuscation Level</div>
+            <div class="ctrl-label">Level</div>
             <div class="level-grid">
-              <button class="lvl-btn" data-level="1">
-                <span class="lvl-num">1</span>
-                <span class="lvl-name">Basic</span>
-              </button>
-              <button class="lvl-btn active" data-level="2">
-                <span class="lvl-num">2</span>
-                <span class="lvl-name">Medium</span>
-              </button>
-              <button class="lvl-btn" data-level="3">
-                <span class="lvl-num">3</span>
-                <span class="lvl-name">Heavy</span>
-              </button>
+              <button class="lvl-btn" data-level="1"><span class="lvl-num">1</span><span class="lvl-name">Basic</span></button>
+              <button class="lvl-btn active" data-level="2"><span class="lvl-num">2</span><span class="lvl-name">Medium</span></button>
+              <button class="lvl-btn" data-level="3"><span class="lvl-num">3</span><span class="lvl-name">Heavy</span></button>
             </div>
           </div>
 
           <div class="ctrl-section">
-            <div class="ctrl-label">Transformations</div>
+            <div class="ctrl-label">Transforms</div>
             <div class="toggles">
-              <label class="tog-row" title="Strip all -- comments">
-                <span class="tog-text">Remove Comments</span>
-                <div class="pill"><input type="checkbox" id="opt-comments" checked /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="Collapse whitespace and newlines">
-                <span class="tog-text">Minify Whitespace</span>
-                <div class="pill"><input type="checkbox" id="opt-minify" checked /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="Rename local variables to garbled names">
-                <span class="tog-text">Rename Variables</span>
-                <div class="pill"><input type="checkbox" id="opt-rename" checked /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="XOR encrypt string literals">
-                <span class="tog-text">Encrypt Strings</span>
-                <div class="pill"><input type="checkbox" id="opt-strings" checked /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="Rewrite integer constants as expressions">
-                <span class="tog-text">Obfuscate Numbers</span>
-                <div class="pill"><input type="checkbox" id="opt-numbers" checked /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="Insert dead code branches">
+
+              <div class="tog-group-label">— Core</div>
+              <label class="tog-row"><span class="tog-text">Remove Comments</span>
+                <div class="pill"><input type="checkbox" id="opt-comments" checked/><span class="thumb"></span></div></label>
+              <label class="tog-row"><span class="tog-text">Minify Whitespace</span>
+                <div class="pill"><input type="checkbox" id="opt-minify" checked/><span class="thumb"></span></div></label>
+
+              <div class="tog-group-label">— Renaming</div>
+              <label class="tog-row"><span class="tog-text">Rename Variables</span>
+                <div class="pill"><input type="checkbox" id="opt-rename" checked/><span class="thumb"></span></div></label>
+
+              <div class="tog-group-label">— Encryption</div>
+              <label class="tog-row" title="All strings → encrypted _S[N] table">
+                <span class="tog-text">String Table <span class="new-badge">★</span></span>
+                <div class="pill"><input type="checkbox" id="opt-strings" checked/><span class="thumb"></span></div></label>
+              <label class="tog-row" title="Numbers → double-layer XOR expressions">
+                <span class="tog-text">XOR Numbers <span class="new-badge">★</span></span>
+                <div class="pill"><input type="checkbox" id="opt-numbers" checked/><span class="thumb"></span></div></label>
+
+              <div class="tog-group-label">— Advanced</div>
+              <label class="tog-row" title="Inject NaN dead-code branches">
+                <span class="tog-text">Opaque Predicates</span>
+                <div class="pill"><input type="checkbox" id="opt-opaque"/><span class="thumb"></span></div></label>
+              <label class="tog-row" title="Insert dead variable blocks">
                 <span class="tog-text">Inject Junk Code</span>
-                <div class="pill"><input type="checkbox" id="opt-junk" /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="Wrap entire script in an IIFE">
+                <div class="pill"><input type="checkbox" id="opt-junk"/><span class="thumb"></span></div></label>
+              <label class="tog-row" title="Wrap API globals in local proxy table">
+                <span class="tog-text">Proxy Globals <span class="new-badge">★</span></span>
+                <div class="pill"><input type="checkbox" id="opt-proxy"/><span class="thumb"></span></div></label>
+              <label class="tog-row" title="Wrap in XOR-keyed while dispatch">
+                <span class="tog-text">Control Flow <span class="new-badge">★</span></span>
+                <div class="pill"><input type="checkbox" id="opt-cflow"/><span class="thumb"></span></div></label>
+              <label class="tog-row" title="Wrap entire script in IIFE">
                 <span class="tog-text">Closure Wrap</span>
-                <div class="pill"><input type="checkbox" id="opt-closure" /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="Encode locals into a shared constant table">
-                <span class="tog-text">Constant Table</span>
-                <div class="pill"><input type="checkbox" id="opt-consttable" /><span class="thumb"></span></div>
-              </label>
-              <label class="tog-row" title="Add obfuscator credit header">
+                <div class="pill"><input type="checkbox" id="opt-closure"/><span class="thumb"></span></div></label>
+              <label class="tog-row" title="Inject Roblox environment check via pcall">
+                <span class="tog-text">Anti-Tamper</span>
+                <div class="pill"><input type="checkbox" id="opt-antitamper"/><span class="thumb"></span></div></label>
+              <label class="tog-row">
                 <span class="tog-text">Watermark</span>
-                <div class="pill"><input type="checkbox" id="opt-watermark" /><span class="thumb"></span></div>
-              </label>
+                <div class="pill"><input type="checkbox" id="opt-watermark"/><span class="thumb"></span></div></label>
+
             </div>
           </div>
 
           <button class="obf-btn" id="btn-obfuscate">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5L2 4.5V8C2 11.5 4.6 14.8 8 15.5C11.4 14.8 14 11.5 14 8V4.5L8 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M5.5 8L7.2 9.7L10.5 6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 1.5L2 4.5V8C2 11.5 4.6 14.8 8 15.5C11.4 14.8 14 11.5 14 8V4.5L8 1.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M5.5 8L7.2 9.7L10.5 6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span id="btn-obf-text">Obfuscate</span>
           </button>
 
           <div class="stats-card" id="stats-card">
-            <div class="stat-row">
-              <span>Input</span><span id="stat-before">—</span>
-            </div>
-            <div class="stat-row">
-              <span>Output</span><span id="stat-after">—</span>
-            </div>
-            <div class="stat-row">
-              <span>Size Ratio</span><span id="stat-ratio" class="stat-ratio">—</span>
-            </div>
-            <div class="stat-row">
-              <span>Vars Renamed</span><span id="stat-vars">—</span>
-            </div>
-            <div class="stat-row">
-              <span>Strings Encrypted</span><span id="stat-strings">—</span>
-            </div>
+            <div class="stat-row"><span>Input</span><span id="stat-before">—</span></div>
+            <div class="stat-row"><span>Output</span><span id="stat-after">—</span></div>
+            <div class="stat-row"><span>Size ratio</span><span id="stat-ratio" class="stat-ratio">—</span></div>
+            <div class="stat-row"><span>Vars renamed</span><span id="stat-vars">—</span></div>
+            <div class="stat-row"><span>Strings</span><span id="stat-strings">—</span></div>
           </div>
 
         </div>
       </div>
 
-      <!-- OUTPUT PANEL -->
-      <div class="panel" id="panel-output">
+      <!-- OUTPUT -->
+      <div class="panel">
         <div class="panel-bar">
           <div class="panel-title">
             <span class="dot dot-green"></span>
@@ -170,9 +150,7 @@
             <span class="lang-tag">Obfuscated</span>
           </div>
           <div class="panel-actions">
-            <button class="icon-btn" id="btn-copy">
-              ▲ Copy
-            </button>
+            <button class="icon-btn" id="btn-copy">▲ Copy</button>
             <button class="icon-btn" id="btn-download">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1v7M4 5.5l2.5 3 2.5-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.5 10.5v1h10v-1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
               .lua
@@ -181,17 +159,14 @@
         </div>
         <div class="editor-wrap">
           <div class="line-numbers" id="line-numbers-out"></div>
-          <textarea id="output-code" spellcheck="false" readonly placeholder="-- Obfuscated output will appear here..."></textarea>
+          <textarea id="output-code" spellcheck="false" readonly placeholder="-- Output appears here..."></textarea>
         </div>
-        <div class="panel-footer">
-          <span id="stat-out">0 lines · 0 chars</span>
-        </div>
+        <div class="panel-footer"><span id="stat-out">0 lines · 0 chars</span></div>
       </div>
 
     </div>
   </main>
 
-  <!-- TOAST -->
   <div class="toast" id="toast"></div>
 
   <script src="lua-obfuscator.js"></script>
